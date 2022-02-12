@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="secondpage.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-heading">
+      <h1>Try to replicate this</h1>
+    </div>
+    <div class="box-container">
+      <ol>
+        <li><div class="box box1"></div></li>
+        <li><div class="box box2"></div></li>
+        <li><div class="box box3"></div></li>
+        <li><div class="box box3"></div></li>
+        <li><div class="box box3"></div></li>
+        <li><div class="box box3"></div></li>
+        <li><div class="box box3"></div></li>
+      </ol>
+    </div>
+
+    <div class="lower-links">
+      <h1><a href="index.html">Back</a></h1>
+      <h1><a href="thirdpage.html">Next</a></h1>
+    </div>
+  </body>
+</html>
+.................................................................
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.main-heading {
+  text-align: center;
+}
+.box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+}
+
+.box {
+  height: 80px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 20px;
+  background-color: rgb(0, 92, 128);
+}
+
+.box1 {
+  width: 100px;
+  transition: width 2s ease-in-out;
+}
+
+.box1:hover {
+  width: 250px;
+}
+
+.box2 {
+  width: 100px;
+  height: 80px;
+  transition: all 2s ease-in-out;
+}
+.box2:hover {
+  width: 250px;
+  height: 250px;
+}
+
+.box3 {
+  width: 100px;
+  transition: all 2s linear;
+}
+.box3:hover {
+  width: 300px;
+}
+
+.box4 {
+  width: 100px;
+  transition: all 2s ease;
+}
+.box4:hover {
+  width: 300px;
+}
+
+.box5 {
+  width: 100px;
+  transition: all 2s ease-in;
+}
+.box5:hover {
+  width: 300px;
+}
+
+.box6 {
+  width: 100px;
+  transition: all 2s ease-out;
+}
+.box6:hover {
+  width: 300px;
+}
+
+.box7 {
+  width: 100px;
+  transition: all 2s ease-in-out;
+}
+.box7:hover {
+  width: 300px;
+}
+
+.lower-links {
+  position: relative;
+  text-align: center;
+  transform: translateY(730px);
+}
+...................................................................................
+#################################################################################
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="thirdpage.css" />
+    <title>Moving Car</title>
+  </head>
+  <body>
+    <div class="sky">
+      <div class="head-message">
+        <h1>
+          <span style="background-color: orange">HAPPY</span
+          ><span style="background-color: white; margin: 0px 10px"
+            >INDEPENDENCE</span
+          ><span style="background-color: green">DAY</span>
+        </h1>
+      </div>
+      <div class="road"></div>
+      <div class="building"></div>
+      <div class="car">
+        <img src="./images/car.png" alt="car_image" />
+      </div>
+      <div class="wheels">
+        <img src="./images/wheel.png" class="front-wheel" />
+        <img src="./images/wheel.png" class="back-wheel" />
+      </div>
+      
+      <div class="sun">
+        <img src="./images/sun.png" alt="sun_image" />
+      </div>
+    </div>
+  </body>
+</html>
+#############################################################################################################
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.sky {
+  background-image: url(./images/sky.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.head-message {
+  position: absolute;
+  left: 25%;
+}
+.head-message h1 {
+  font-size: 55px;
+}
+
+.road {
+  background-image: url(./images/road.jpg);
+  position: absolute;
+  height: 40vh;
+  width: 500%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: road 5s linear infinite;
+  display: block;
+}
+@keyframes road {
+  100% {
+    transform: translateX(-3400px);
+  }
+}
+
+.building {
+  background-image: url(./images/city.png);
+  position: absolute;
+  bottom: 250px;
+  height: 40vh;
+  width: 500%;
+  background-repeat: repeat-x;
+  animation: building 5s linear infinite;
+  display: block;
+}
+
+@keyframes building {
+  100% {
+    transform: translateX(-1400px);
+  }
+}
+.car {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+  z-index: 2;
+}
+
+.car img {
+  width: 100%;
+  animation: car 1s linear infinite;
+}
+
+@keyframes car {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+
+.wheels {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 250px;
+  transform: translateX(-50%);
+}
+.wheels img {
+  width: 50px;
+  height: 50px;
+  animation: wheel 1s linear infinite;
+}
+@keyframes wheel {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.front-wheel {
+  position: absolute;
+  left: -110px;
+}
+.back-wheel {
+  position: absolute;
+  left: 76px;
+}
+
+.sun {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  z-index: 2;
+  right: 220px;
+  top: 6%;
+}
